@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Dacite annotations
+Bundle-SymbolicName: edu.cmu.hcii.dacite.annotations;singleton:=true
+Bundle-Version: 0.1
+Export-Package: edu.cmu.hcii.dacite.annotations
+Require-Bundle: org.eclipse.jdt.apt.core;bundle-version="3.3.500"
