@@ -63,9 +63,7 @@ public class ApiProcessorFactory implements AnnotationProcessorFactory {
 	}
 
 	@Override
-	public AnnotationProcessor getProcessorFor(
-			Set<AnnotationTypeDeclaration> atds,
-			final AnnotationProcessorEnvironment env) {
+	public AnnotationProcessor getProcessorFor(Set<AnnotationTypeDeclaration> atds, AnnotationProcessorEnvironment env) {
 		return new Processor(env);
 	}
 
@@ -203,7 +201,6 @@ public class ApiProcessorFactory implements AnnotationProcessorFactory {
 						getType(m.getReturnType(), false);
 
 				writer.println(line);
-				//				writer.println(getLine(Builder.class.getSimpleName(), m.getReturnType(), m));
 			}
 		}
 
@@ -213,23 +210,6 @@ public class ApiProcessorFactory implements AnnotationProcessorFactory {
 				for(int i = 0; i < params.size(); i++) {
 					ParameterDeclaration p = params.get(i);
 					TypeMirror typeMirror  = p.getType();
-					
-					
-//					typeMirror.accept(new SimpleTypeVisitor() {
-//
-//						@Override
-//						public void visitInterfaceType(InterfaceType t) {
-//							System.out.println(t);	
-//
-//						}
-//
-//
-//						@Override
-//						public void visitClassType(ClassType t) {
-//							System.out.println(t);
-//						}
-//
-//					});
 					if(getType(typeMirror, false).equals(type)) {
 						String kind = m.getModifiers().contains(Modifier.STATIC) ? "static" : "instance";
 						writer.println(getLine(Helper.class.getSimpleName(), p.getType(), m) + ":" + i + ":" + kind);
@@ -328,14 +308,20 @@ public class ApiProcessorFactory implements AnnotationProcessorFactory {
 				if(!s.isEmpty())
 					s+=",";
 
-				s+=getType(d.getType(), false);
+				s+=getType(d.getType(), false) + " " + d.getSimpleName();
 			}
 
 			return s.isEmpty() ? " " : s;
 		}
 
 		private String getType(TypeMirror type, boolean includeTypeArgs) {
-
+			if(type instanceof ArrayType) 
+				return getType(((ArrayType)type).getComponentType(), includeTypeArgs) + "[]";
+			else
+				return getNonArrayType(type, includeTypeArgs);
+		}
+		
+		private String getNonArrayType(TypeMirror type, boolean includeTypeArgs) {
 			if(type instanceof DeclaredType) {
 				TypeDeclaration dec = ((DeclaredType) type).getDeclaration();
 				Collection<TypeParameterDeclaration> typeParams = dec.getFormalTypeParameters();
