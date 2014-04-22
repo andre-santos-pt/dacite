@@ -1,4 +1,4 @@
-package apiusabilityplugin;
+package edu.cmu.hcii.dacite.plugin;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -29,9 +29,9 @@ import org.eclipse.jface.text.contentassist.IContextInformation;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
-import apiusabilityplugin.IMethodInfo.IParamInfo;
-import creation.FactoryHint;
-import creation.FactoryVarProposal;
+import edu.cmu.hcii.dacite.plugin.IMethodInfo.IParamInfo;
+import edu.cmu.hcii.dacite.plugin.creation.FactoryHint;
+import edu.cmu.hcii.dacite.plugin.creation.FactoryVarProposal;
 
 public class ProposalComputer implements IJavaCompletionProposalComputer, IContextInformation {
 

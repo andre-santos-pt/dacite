@@ -1,6 +1,4 @@
-package apiusabilityplugin;
-
-import operation.ObjectCreationInstruction;
+package edu.cmu.hcii.dacite.plugin;
 
 import org.eclipse.jdt.ui.text.java.JavaContentAssistInvocationContext;
 import org.eclipse.jface.text.BadLocationException;
@@ -9,6 +7,8 @@ import org.eclipse.jface.text.contentassist.IContextInformation;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+
+import edu.cmu.hcii.dacite.plugin.manipulation.ObjectCreationInstruction;
 
 public class ApiProposal implements IApiUsabilityProposal {
 

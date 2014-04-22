@@ -2,23 +2,32 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension-point id="api" name="API contribution" schema="schema/api.exsd"/>
+   
    <extension
-         id="id1"
+         id="edu.cmu.hcii.dacite.plugin.cat"
+         name="Dacite"
          point="org.eclipse.jdt.ui.javaCompletionProposalComputer">
-      <javaCompletionProposalComputer
-            activate="true"
-            categoryId="org.eclipse.jdt.ui.defaultProposalCategory"
-            class="apiusabilityplugin.ProposalComputer"
-            needsSortingAfterFiltering="false">
-      </javaCompletionProposalComputer>
+      <proposalCategory></proposalCategory>
    </extension>
+   
    <extension
          point="org.eclipse.jdt.ui.javaCompletionProposalSorters">
       <proposalSorter
-            class="apiusabilityplugin.ProposalSorter"
-            id="APIUsabilityPlugin.sorter"
-            name="API Usability">
+            class="edu.cmu.hcii.dacite.plugin.ProposalSorter"
+            id="edu.cmu.hcii.dacite.plugin.ProposalSorter"
+            name="Dacite">
       </proposalSorter>
+   </extension>
+   
+   <extension
+         id="edu.cmu.hcii.dacite.plugin.proposalComputer"
+         point="org.eclipse.jdt.ui.javaCompletionProposalComputer">
+      <javaCompletionProposalComputer
+            activate="true"
+            categoryId="edu.cmu.hcii.dacite.plugin.cat"
+            class="edu.cmu.hcii.dacite.plugin.ProposalComputer"
+            needsSortingAfterFiltering="true">
+      </javaCompletionProposalComputer>
    </extension>
 
 </plugin>

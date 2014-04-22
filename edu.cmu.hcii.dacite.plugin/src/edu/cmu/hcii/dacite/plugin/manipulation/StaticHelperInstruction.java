@@ -1,9 +1,9 @@
-package operation;
+package edu.cmu.hcii.dacite.plugin.manipulation;
 
 import java.util.Collection;
 
-import apiusabilityplugin.IMethodInfo;
-import apiusabilityplugin.Instruction;
+import edu.cmu.hcii.dacite.plugin.IMethodInfo;
+import edu.cmu.hcii.dacite.plugin.Instruction;
 
 
 public class StaticHelperInstruction extends Instruction {

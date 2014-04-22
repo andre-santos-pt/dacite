@@ -1,4 +1,4 @@
-package creation;
+package edu.cmu.hcii.dacite.plugin.creation;
 
 import org.eclipse.jdt.ui.text.java.ContentAssistInvocationContext;
 import org.eclipse.jface.text.BadLocationException;
@@ -8,9 +8,9 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
-import apiusabilityplugin.Activator;
-import apiusabilityplugin.IApiUsabilityProposal;
-import apiusabilityplugin.Instruction;
+import edu.cmu.hcii.dacite.plugin.Activator;
+import edu.cmu.hcii.dacite.plugin.IApiUsabilityProposal;
+import edu.cmu.hcii.dacite.plugin.Instruction;
 
 public class FactoryVarProposal implements IApiUsabilityProposal {
 

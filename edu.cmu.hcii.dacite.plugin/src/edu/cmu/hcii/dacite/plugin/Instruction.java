@@ -1,10 +1,10 @@
-package apiusabilityplugin;
+package edu.cmu.hcii.dacite.plugin;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
-import apiusabilityplugin.IMethodInfo.IParamInfo;
+import edu.cmu.hcii.dacite.plugin.IMethodInfo.IParamInfo;
 
 
 public abstract class Instruction {

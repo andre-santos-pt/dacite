@@ -1,17 +1,18 @@
-package creation;
+package edu.cmu.hcii.dacite.plugin.creation;
 
-import apiusabilityplugin.IMethodInfo;
-import apiusabilityplugin.Instruction;
+import edu.cmu.hcii.dacite.plugin.IMethodInfo;
+import edu.cmu.hcii.dacite.plugin.Instruction;
+import edu.cmu.hcii.dacite.plugin.IMethodInfo.IParamInfo;
 
-public class FactoryMethodInstruction extends Instruction {
+public class StaticFactoryInstruction extends Instruction {
 
-	public FactoryMethodInstruction(IMethodInfo info) {
+	public StaticFactoryInstruction(IMethodInfo info) {
 		super(info);
 	}
 	
 	@Override
 	public String getInstruction(String var, boolean preview) {
-		StringBuffer s = new StringBuffer(var);
+		StringBuffer s = new StringBuffer(getSimpleType());
 		s.append('.').append(getMethodName());
 		appendParamsList(var, s, preview);
 		return s.toString();
@@ -19,11 +20,12 @@ public class FactoryMethodInstruction extends Instruction {
 	
 	@Override
 	public String getDescription() {
-		return "Factory method";
+		return "Static factory";
 	}
 
 
 	
+	// TODO pull up?
 	@Override
 	public int charsToErase(String line) {
 		if(line.trim().endsWith("new")) {
@@ -39,6 +41,6 @@ public class FactoryMethodInstruction extends Instruction {
 		return 0;
 	}
 
-	
+
 
 }

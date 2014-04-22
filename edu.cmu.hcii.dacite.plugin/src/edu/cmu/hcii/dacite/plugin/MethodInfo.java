@@ -1,4 +1,4 @@
-package apiusabilityplugin;
+package edu.cmu.hcii.dacite.plugin;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;

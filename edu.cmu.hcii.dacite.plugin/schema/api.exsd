@@ -57,13 +57,6 @@
                </documentation>
             </annotation>
          </attribute>
-         <attribute name="jar" type="string" use="required">
-            <annotation>
-               <documentation>
-                  
-               </documentation>
-            </annotation>
-         </attribute>
       </complexType>
    </element>
 

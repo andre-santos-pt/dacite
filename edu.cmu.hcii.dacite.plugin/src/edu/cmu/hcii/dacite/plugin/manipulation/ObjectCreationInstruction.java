@@ -1,7 +1,7 @@
-package operation;
+package edu.cmu.hcii.dacite.plugin.manipulation;
 
-import apiusabilityplugin.IMethodInfo;
-import apiusabilityplugin.Instruction;
+import edu.cmu.hcii.dacite.plugin.IMethodInfo;
+import edu.cmu.hcii.dacite.plugin.Instruction;
 
 
 public class ObjectCreationInstruction extends Instruction {

@@ -1,4 +1,4 @@
-package apiusabilityplugin;
+package edu.cmu.hcii.dacite.plugin;
 
 import org.eclipse.jface.text.contentassist.ICompletionProposal;
 

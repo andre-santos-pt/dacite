@@ -1,4 +1,4 @@
-package apiusabilityplugin;
+package edu.cmu.hcii.dacite.plugin;
 
 import java.io.File;
 import java.util.Collection;
@@ -6,8 +6,6 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
-
-import apiusabilityplugin.IMethodInfo.IParamInfo;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.HashBasedTable;
@@ -19,6 +17,7 @@ import edu.cmu.hcii.dacite.annotations.FactoryMethod;
 import edu.cmu.hcii.dacite.annotations.Helper;
 import edu.cmu.hcii.dacite.annotations.Parent;
 import edu.cmu.hcii.dacite.annotations.StaticFactory;
+import edu.cmu.hcii.dacite.plugin.IMethodInfo.IParamInfo;
 
 public class ApiAnnotationsProvider implements IApiInformationProvider {
 

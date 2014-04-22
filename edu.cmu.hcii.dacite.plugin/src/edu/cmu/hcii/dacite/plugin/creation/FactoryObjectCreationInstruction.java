@@ -1,7 +1,7 @@
-package creation;
+package edu.cmu.hcii.dacite.plugin.creation;
 
-import apiusabilityplugin.IMethodInfo;
-import apiusabilityplugin.Instruction;
+import edu.cmu.hcii.dacite.plugin.IMethodInfo;
+import edu.cmu.hcii.dacite.plugin.Instruction;
 
 public class FactoryObjectCreationInstruction extends Instruction {
 

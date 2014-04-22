@@ -1,4 +1,4 @@
-package creation;
+package edu.cmu.hcii.dacite.plugin.creation;
 
 import java.util.Set;
 
@@ -10,10 +10,10 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
-import apiusabilityplugin.Activator;
-import apiusabilityplugin.ContextInfo;
-import apiusabilityplugin.IApiUsabilityProposal;
-import apiusabilityplugin.Instruction;
+import edu.cmu.hcii.dacite.plugin.Activator;
+import edu.cmu.hcii.dacite.plugin.ContextInfo;
+import edu.cmu.hcii.dacite.plugin.IApiUsabilityProposal;
+import edu.cmu.hcii.dacite.plugin.Instruction;
 
 public class FactoryHint implements IApiUsabilityProposal {
 

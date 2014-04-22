@@ -1,4 +1,4 @@
-package apiusabilityplugin;
+package edu.cmu.hcii.dacite.plugin;
 
 import java.io.File;
 import java.io.IOException;
@@ -7,10 +7,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
-
-import operation.ObjectBuilderInstruction;
-import operation.ObjectCreationInstruction;
-import operation.StaticHelperInstruction;
 
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.IConfigurationElement;
@@ -22,8 +18,11 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
-import creation.FactoryMethodInstruction;
-import creation.StaticFactoryInstruction;
+import edu.cmu.hcii.dacite.plugin.creation.FactoryMethodInstruction;
+import edu.cmu.hcii.dacite.plugin.creation.StaticFactoryInstruction;
+import edu.cmu.hcii.dacite.plugin.manipulation.ObjectBuilderInstruction;
+import edu.cmu.hcii.dacite.plugin.manipulation.ObjectCreationInstruction;
+import edu.cmu.hcii.dacite.plugin.manipulation.StaticHelperInstruction;
 
 public class Activator implements BundleActivator {
 	private static final String PLUGIN_ID = "edu.cmu.hcii.dacite.plugin";
@@ -51,19 +50,18 @@ public class Activator implements BundleActivator {
 	@Override
 	public void start(BundleContext context) throws Exception {
 		loadPlugins();
-
 	}
 
 	private void loadPlugins() {
 		for(IConfigurationElement e : Platform.getExtensionRegistry().getConfigurationElementsFor(EXT_POINT_API)) {
 			if(e.getName().equals(EXT_POINT_API_INTERNAL))
-				handleAnnotationIndexes(e);
+				handleInternalAnnotations(e);
 			else if(e.getName().equals(EXT_POINT_API_EXTERNAL))
 				handleExternalAnnotations(e);
 		}
 	}
 
-	private void handleAnnotationIndexes(IConfigurationElement e) {
+	private void handleInternalAnnotations(IConfigurationElement e) {
 		String bundleId = e.getContributor().getName();
 
 		URL entry = Platform.getBundle(bundleId).getEntry(e.getAttribute("path")); 
@@ -119,7 +117,6 @@ public class Activator implements BundleActivator {
 				}
 				builder.compositeChild(type, params(c.getChildren("param")), instanceParam);
 			}
-
 		}
 		providers.add(builder.create());
 	}
@@ -136,7 +133,6 @@ public class Activator implements BundleActivator {
 
 	@Override
 	public void stop(BundleContext context) throws Exception {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -157,8 +153,6 @@ public class Activator implements BundleActivator {
 		}
 		return set;
 	}
-
-
 
 	public Collection<Instruction> getFactories(String factoryType, String type) {
 		Set<Instruction> set = new HashSet<>();
@@ -181,13 +175,6 @@ public class Activator implements BundleActivator {
 		return set;
 	}
 
-
-
-
-
-
-
-
 	public Collection<Instruction> getHelpers(String type) {
 		Set<Instruction> set = new HashSet<>();
 		for(IApiInformationProvider provider : providers) {
@@ -197,17 +184,6 @@ public class Activator implements BundleActivator {
 		}
 		return set;
 	}
-
-
-	//	public Collection<Instruction> getDecorators(String type) {
-	//		Set<Instruction> set = new HashSet<>();
-	//		for(IApiInformationProvider provider : providers) {
-	//			for(IMethodInfo info  : provider.getDecorators(type)) {
-	//				set.add(new DecoratorObjectInstruction(info));
-	//			}
-	//		}
-	//		return set;
-	//	}
 
 	public Collection<Instruction> getCompositeChildren(String type) {
 		Set<Instruction> set = new HashSet<>();
