@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="api" name="API contribution" schema="schema/api.exsd"/>
+   <extension
+         id="id1"
+         point="org.eclipse.jdt.ui.javaCompletionProposalComputer">
+      <javaCompletionProposalComputer
+            activate="true"
+            categoryId="org.eclipse.jdt.ui.defaultProposalCategory"
+            class="apiusabilityplugin.ProposalComputer"
+            needsSortingAfterFiltering="false">
+      </javaCompletionProposalComputer>
+   </extension>
+   <extension
+         point="org.eclipse.jdt.ui.javaCompletionProposalSorters">
+      <proposalSorter
+            class="apiusabilityplugin.ProposalSorter"
+            id="APIUsabilityPlugin.sorter"
+            name="API Usability">
+      </proposalSorter>
+   </extension>
+
+</plugin>
