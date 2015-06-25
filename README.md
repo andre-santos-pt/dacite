@@ -11,4 +11,4 @@ The folders in the repository are Eclipse projects.
 
 Short demo of Dacite code completion in action:
 
-[![Dacite demo](https://i.ytimg.com/vi/UBM_kiAiHYg/hqdefault.jpg)](https://youtu.be/UBM_kiAiHYg "Dacite demo")
+[![Dacite demo](https://i.ytimg.com/vi/Wy4M2-g8qjk/hqdefault.jpg)](https://youtu.be/Wy4M2-g8qjk "Dacite demo")
