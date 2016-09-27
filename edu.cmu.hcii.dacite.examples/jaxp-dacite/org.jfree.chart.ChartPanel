@@ -1,0 +1,5 @@
+Parent:org.jfree.chart.JFreeChart:new:org.jfree.chart.JFreeChart chart:org.jfree.chart.JFreeChart:0
+Parent:org.jfree.chart.JFreeChart:new:org.jfree.chart.JFreeChart chart,boolean useBuffer:org.jfree.chart.JFreeChart:0
+Parent:org.jfree.chart.JFreeChart:new:org.jfree.chart.JFreeChart chart,boolean properties,boolean save,boolean print,boolean zoom,boolean tooltips:org.jfree.chart.JFreeChart:0
+Parent:org.jfree.chart.JFreeChart:new:org.jfree.chart.JFreeChart chart,int width,int height,int minimumDrawWidth,int minimumDrawHeight,int maximumDrawWidth,int maximumDrawHeight,boolean useBuffer,boolean properties,boolean save,boolean print,boolean zoom,boolean tooltips:org.jfree.chart.JFreeChart:0
+Parent:org.jfree.chart.JFreeChart:new:org.jfree.chart.JFreeChart chart,int width,int height,int minimumDrawWidth,int minimumDrawHeight,int maximumDrawWidth,int maximumDrawHeight,boolean useBuffer,boolean properties,boolean copy,boolean save,boolean print,boolean zoom,boolean tooltips:org.jfree.chart.JFreeChart:0

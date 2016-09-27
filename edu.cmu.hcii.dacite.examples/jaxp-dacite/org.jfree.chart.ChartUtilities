@@ -1,0 +1,15 @@
+Helper:org.jfree.chart.JFreeChart:applyCurrentTheme:org.jfree.chart.JFreeChart chart:void:0:static
+Helper:org.jfree.chart.JFreeChart:saveChartAsJPEG:java.io.File file,float quality,org.jfree.chart.JFreeChart chart,int width,int height:void:2:static
+Helper:org.jfree.chart.JFreeChart:saveChartAsJPEG:java.io.File file,float quality,org.jfree.chart.JFreeChart chart,int width,int height,org.jfree.chart.ChartRenderingInfo info:void:2:static
+Helper:org.jfree.chart.JFreeChart:saveChartAsPNG:java.io.File file,org.jfree.chart.JFreeChart chart,int width,int height:void:1:static
+Helper:org.jfree.chart.JFreeChart:saveChartAsPNG:java.io.File file,org.jfree.chart.JFreeChart chart,int width,int height,org.jfree.chart.ChartRenderingInfo info:void:1:static
+Helper:org.jfree.chart.JFreeChart:saveChartAsPNG:java.io.File file,org.jfree.chart.JFreeChart chart,int width,int height,org.jfree.chart.ChartRenderingInfo info,boolean encodeAlpha,int compression:void:1:static
+Helper:org.jfree.chart.JFreeChart:writeChartAsJPEG:java.io.OutputStream out,org.jfree.chart.JFreeChart chart,int width,int height:void:1:static
+Helper:org.jfree.chart.JFreeChart:writeChartAsJPEG:java.io.OutputStream out,float quality,org.jfree.chart.JFreeChart chart,int width,int height:void:2:static
+Helper:org.jfree.chart.JFreeChart:writeChartAsJPEG:java.io.OutputStream out,org.jfree.chart.JFreeChart chart,int width,int height,org.jfree.chart.ChartRenderingInfo info:void:1:static
+Helper:org.jfree.chart.JFreeChart:writeChartAsJPEG:java.io.OutputStream out,float quality,org.jfree.chart.JFreeChart chart,int width,int height,org.jfree.chart.ChartRenderingInfo info:void:2:static
+Helper:org.jfree.chart.JFreeChart:writeChartAsPNG:java.io.OutputStream out,org.jfree.chart.JFreeChart chart,int width,int height:void:1:static
+Helper:org.jfree.chart.JFreeChart:writeChartAsPNG:java.io.OutputStream out,org.jfree.chart.JFreeChart chart,int width,int height,boolean encodeAlpha,int compression:void:1:static
+Helper:org.jfree.chart.JFreeChart:writeChartAsPNG:java.io.OutputStream out,org.jfree.chart.JFreeChart chart,int width,int height,org.jfree.chart.ChartRenderingInfo info:void:1:static
+Helper:org.jfree.chart.JFreeChart:writeChartAsPNG:java.io.OutputStream out,org.jfree.chart.JFreeChart chart,int width,int height,org.jfree.chart.ChartRenderingInfo info,boolean encodeAlpha,int compression:void:1:static
+Helper:org.jfree.chart.JFreeChart:writeScaledChartAsPNG:java.io.OutputStream out,org.jfree.chart.JFreeChart chart,int width,int height,int widthScaleFactor,int heightScaleFactor:void:1:static

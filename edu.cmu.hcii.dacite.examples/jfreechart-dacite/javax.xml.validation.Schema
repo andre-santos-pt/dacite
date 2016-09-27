@@ -1,0 +1,3 @@
+Factory:javax.xml.validation.ValidatorHandler,javax.xml.validation.Validator
+FactoryMethod:javax.xml.validation.Validator:newValidator: :javax.xml.validation.Validator
+FactoryMethod:javax.xml.validation.ValidatorHandler:newValidatorHandler: :javax.xml.validation.ValidatorHandler

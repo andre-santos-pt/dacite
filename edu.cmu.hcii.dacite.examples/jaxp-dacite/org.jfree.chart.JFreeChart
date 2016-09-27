@@ -1,0 +1,3 @@
+Parent:org.jfree.chart.plot.Plot:new:org.jfree.chart.plot.Plot plot:org.jfree.chart.plot.Plot:0
+Parent:org.jfree.chart.plot.Plot:new:java.lang.String title,org.jfree.chart.plot.Plot plot:org.jfree.chart.plot.Plot:1
+Parent:org.jfree.chart.plot.Plot:new:java.lang.String title,java.awt.Font titleFont,org.jfree.chart.plot.Plot plot,boolean createLegend:org.jfree.chart.plot.Plot:2

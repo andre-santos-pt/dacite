@@ -1,0 +1,7 @@
+Factory:javax.xml.validation.Schema
+StaticFactory:javax.xml.validation.SchemaFactory:newInstance:java.lang.String schemaLanguage:javax.xml.validation.SchemaFactory
+FactoryMethod:javax.xml.validation.Schema:newSchema:javax.xml.transform.Source schema:javax.xml.validation.Schema
+FactoryMethod:javax.xml.validation.Schema:newSchema:java.io.File schema:javax.xml.validation.Schema
+FactoryMethod:javax.xml.validation.Schema:newSchema:java.net.URL schema:javax.xml.validation.Schema
+FactoryMethod:javax.xml.validation.Schema:newSchema:javax.xml.transform.Source[] schemas:javax.xml.validation.Schema
+FactoryMethod:javax.xml.validation.Schema:newSchema: :javax.xml.validation.Schema

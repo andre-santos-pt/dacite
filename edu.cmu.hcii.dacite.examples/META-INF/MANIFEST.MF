@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: APIExample
+Bundle-SymbolicName: edu.cmu.hcii.dacite.examples;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: edu.cmu.hcii.dacite.annotations;bundle-version="0.0.0",
+ edu.cmu.hcii.dacite.plugin;bundle-version="0.0.0"
